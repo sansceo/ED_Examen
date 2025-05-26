@@ -37,4 +37,23 @@ public class DatosDAO {
             ubicacion++;
         }
     }
+    
+    public Datos getDatos(){
+        return lista.get(ubicacion);
+    }
+    
+    public void setDatos(Datos a){
+        lista.set(ubicacion, a);
+    }
+    
+    public void agregar(Datos a){
+        lista.add(a);
+    }
+    public String imprimir(){
+        String resultado = "";
+        for (Datos datos : lista) {
+            resultado += datos.getCodigo();
+        }
+        return resultado;
+    }
 }
