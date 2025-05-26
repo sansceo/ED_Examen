@@ -6,6 +6,7 @@ package Pregunta1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -362,12 +363,12 @@ public class Interfaz extends javax.swing.JFrame {
         String codigo = txtCodigo.getText();
         String nombre = txtNombre.getText();
         String direccion = txtDireccion.getText();
-        Date fecha = getFecha();
-        Double talla = Double.parseDouble(txtTalla.getText());
+        String fecha = txtFecha.getText();
+        Double talla = Double.valueOf(txtTalla.getText());
         String correo = txtCorreo.getText();
         
         if (agregando == true){
-            Datos a = new Datos(codigo,nombre,direccion,fecha,talla,correo);
+            Datos a = new Datos(codigo,nombre,direccion,sdf.parse(fecha),talla,correo);
         }
     }//GEN-LAST:event_btnGrabarActionPerformed
 
