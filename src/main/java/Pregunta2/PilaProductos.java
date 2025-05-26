@@ -73,6 +73,7 @@ public class PilaProductos {
             System.out.println("ingrese al menos dos productos para sacarle promedio");
         }
         else {
+            Nodo actual= primero;
             
         }
         return null;
