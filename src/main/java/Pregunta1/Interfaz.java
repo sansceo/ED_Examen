@@ -62,6 +62,13 @@ public class Interfaz extends javax.swing.JFrame {
         txtCodigo.setEnabled(x);
         txtNombre.setEnabled(x);
     }
+    
+    public Date getFecha() throws ParseException{
+        Date a = null;
+        
+        a=sdf.parse(txtFecha.getText());
+        return a;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -355,22 +362,12 @@ public class Interfaz extends javax.swing.JFrame {
         String codigo = txtCodigo.getText();
         String nombre = txtNombre.getText();
         String direccion = txtDireccion.getText();
-        String fecha = txtFecha.getText();
-        String talla = txtTalla.getText();
+        Date fecha = getFecha();
+        Double talla = Double.parseDouble(txtTalla.getText());
         String correo = txtCorreo.getText();
         
         if (agregando == true){
-            Datos a = new Datos(codigo,nombre,direccion,sdf.parse(fecha),Double.parseDouble(talla),correo);
-            datosDAO.agregar(a);
-            JOptionPane.showMessageDialog(rootPane, "Agregado");
-
-            hablilitarBotonesEdicion(true);
-            habilitarCajas(false);
-            habilitarBotonesMovimiento(true);
-        } else {
-            Datos a = new Datos(codigo,nombre,direccion,sdf.parse(talla,null),Double.parseDouble(talla),correo);
-            datosDAO.setDatos(a);
-                
+            Datos a = new Datos(codigo,nombre,direccion,fecha,talla,correo);
         }
     }//GEN-LAST:event_btnGrabarActionPerformed
 

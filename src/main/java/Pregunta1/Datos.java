@@ -12,15 +12,12 @@ import java.util.Date;
  */
 public class Datos {
 
-    String Codigo;
-    String Nombre;
-    String Direccion;
-    Date FechaNacimiento;
-    Double Talla;
-    String Correo;
-
-    public Datos() {
-    }
+    public String Codigo;
+    public String Nombre;
+    public String Direccion;
+    public Date FechaNacimiento;
+    public Double Talla;
+    public String Correo;
 
     public Datos(String Codigo, String Nombre, String Direccion, Date FechaNacimiento, Double Talla, String Correo) {
         this.Codigo = Codigo;
@@ -29,6 +26,9 @@ public class Datos {
         this.FechaNacimiento = FechaNacimiento;
         this.Talla = Talla;
         this.Correo = Correo;
+    }
+    
+    public Datos() {
     }
 
     public String getCodigo() {
