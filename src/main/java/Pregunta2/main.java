@@ -6,8 +6,13 @@ package Pregunta2;
 
 /**
  *
- * @author italo adriano
+ * @author USUARIO
  */
-public class Datos {
+public class main {
+    public static void main(String[] args) {
+        PilaProductos pila= new PilaProductos();
+
+        }
+    }
     
-}
+
