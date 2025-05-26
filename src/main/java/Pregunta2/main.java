@@ -13,7 +13,9 @@ public class main {
         PilaProductos pila= new PilaProductos();
         try {
             
+            Productos eliminar = pila.elimianr{
             
+        }
             
             
         } catch (Exception e) {
