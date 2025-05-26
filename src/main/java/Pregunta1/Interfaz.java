@@ -145,6 +145,11 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Codigo");
 
@@ -384,6 +389,19 @@ public class Interfaz extends javax.swing.JFrame {
         txtCodigo.setText(String.valueOf(a.getCodigo()));
         txtNombre.setText(a.getNombre());
     }//GEN-LAST:event_Ultimo1ActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+        hablilitarBotonesEdicion(true);
+        habilitarCajas(false);
+        habilitarBotonesMovimiento(true);
+
+        Datos a = datosDAO.getDatos();
+
+        txtCodigo.setText(String.valueOf(a.getCodigo()));
+        txtNombre.setText(a.getNombre());
+        agregando = false;
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
