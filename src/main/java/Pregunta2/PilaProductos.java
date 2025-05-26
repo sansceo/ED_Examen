@@ -73,8 +73,12 @@ public class PilaProductos {
             System.out.println("ingrese al menos dos productos para sacarle promedio");
         }
         else {
-            Nodo actual= primero;
+            double suma=0;
+            int contador=0;
+            Nodo actual = primero;
+            while (actual! null){
             
+        }
         }
         return null;
     }
