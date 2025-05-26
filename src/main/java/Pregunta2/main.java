@@ -11,6 +11,13 @@ package Pregunta2;
 public class main {
     public static void main(String[] args) {
         PilaProductos pila= new PilaProductos();
+        try {
+            
+            
+            
+            
+        } catch (Exception e) {
+        }
 
         }
     }
