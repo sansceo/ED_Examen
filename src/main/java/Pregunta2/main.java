@@ -11,6 +11,15 @@ package Pregunta2;
 public class main {
     public static void main(String[] args) {
         PilaProductos pila= new PilaProductos();
+        try {
+            
+            Productos eliminar = pila.elimianr{
+            
+        }
+            
+            
+        } catch (Exception e) {
+        }
 
         }
     }
